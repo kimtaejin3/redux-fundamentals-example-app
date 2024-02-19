@@ -40,7 +40,7 @@ function getRandomInt(min, max) {
 }
 
 const randomFromArray = (array) => {
-  const index = getRandomInt(0, array.length - 1)
+  const index = getRandomInt(1, array.length - 1)
   return array[index]
 }
 
@@ -60,7 +60,7 @@ const generateTodoText = () => {
 new Server({
   routes() {
     this.namespace = 'fakeApi'
-    //this.timing = 2000
+    this.timing = 2000
 
     this.resource('todos')
     this.resource('lists')
